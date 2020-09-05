@@ -2,6 +2,24 @@ import React from 'react';
 
 const blogposts = [
   {
+    title: "The Frailty of Reputation",
+    date: "09/04/2020",
+    image: "",
+    url: "FrailtyOfReputation",
+    tags: ["misc"],
+    html: <>
+      <p>Reputation is frail. It is others&rsquo; opinions of you, your outward-facing image, the entity people talk about when you are brought up and you are not around. People tend to care deeply about their reputation (including myself) - it&rsquo;s one of those outdated software programs we all seem to have installed in our brains. During the thousands of years we spent in communities where everyone knows each other, those who spent time cultivating and maintaining their tribal reputation were probably more likely to survive.&nbsp;Like many of our other monkey behaviors, I believe we should be wary of our desire to build or keep a good reputation. </p>
+      <p>In Robert Greene&rsquo;s&nbsp;<em>48 Laws of Power,&nbsp;</em>Law 5 states:</p>
+      <p style="margin-left: 30.0px;"><em>Reputation is the cornerstone of power. Through reputation alone you can intimidate and win; once it slips, however, you are vulnerable, and will be attacked on all sides. Make your reputation unassailable. Always be alert to potential attacks and thwart them before they happen. Meanwhile, learn to destroy your enemies by opening holes in their own reputations. Then stand aside and let public opinion hang them.&nbsp;</em><br /></p>
+      <p>I don&rsquo;t think I disagree with his idea that reputation&nbsp;<em>is&nbsp;</em>something that can be manipulated in your favor in one way or another, but I do reject the entire worldview that is presented here. Even if we set aside the pursuit of power and the uber-competitiveness, there&rsquo;s something inherently gross about tending to your reputation and wielding it as a tool. </p>
+      <p> If your reputation is anything other than a description of who you actually are, you are a faker. There&rsquo;s this John Wooden quote that sums up this idea: </p>
+      <p style="margin-left: 30.0px;">&ldquo;Character is what you really are. Reputation is what people say you are. Reputation is often based on character &ndash; but not always.&rdquo;</p>
+      <p>So here&rsquo;s exactly the problem with the worldview presented by Robert Greene: &ldquo;cultivating a reputation&rdquo; is what you do when you&rsquo;d like others to perceive you to be something you&rsquo;re not. The person who cannot supply enough value to the tribe resorts to convincing others that they&nbsp;<em>are&nbsp;</em>providing value or exaggerating the little value they do provide.&nbsp;</p>
+      <p>I feel I&rsquo;ve been a little harsh here; I should reiterate that this is an annoyingly innate instinct we have. I frequently catch myself worrying about my reputation (i.e. what others think/say about me), and I&rsquo;m certain there are times where I never do catch myself. The desire to fit in or be accepted is among some of the strongest desires we are subject to. Many times the urge to embellish or defend your reputation or attack someone else&rsquo;s is automatic. But to do so is fundamentally fraudulent and in direct opposition to truth. </p>
+      <p>Your reputation is frail. Your &ldquo;true self,&rdquo; your character, is significantly more robust. Instead of spending time convincing others that we&rsquo;re this or that, we should be spending time becoming who we actually want to be. </p>
+    </>
+  },
+  {
     title: "Talkin' Politics",
     date: "08/13/2020",
     image: "",
