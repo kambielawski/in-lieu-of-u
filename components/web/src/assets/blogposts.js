@@ -2,6 +2,117 @@ import React from 'react';
 
 const blogposts = [
   {
+    title: "Book: The Annotated Turing",
+    date: "09/06/2020",
+    image: "",
+    url: "AnnotatedTuring",
+    tags: ["books", "computing"],
+    html: <>
+      <p>The notion of computation was birthed and was developed significantly by mathematicians. In Alan Turing&rsquo;s seminal 1936 paper&nbsp;<strong>On Computable Numbers and an Application to the Entscheidungsproblem</strong>, Turing defines a new subset of real numbers with his notion of computation. To make computation easy to grasp, Turing creates what is probably one of the most famous intuition pumps in history: the &ldquo;universal computing machine.&rdquo; As we know it, the Turing Machine. He uses it to solve a 19th century mathematical problem, the &ldquo;entscheidungsproblem,&rdquo; or, the&nbsp;<em>decision&nbsp;</em>problem.&nbsp;</p>
+      <p>Charles Petzold&rsquo;s&nbsp;<em>The Annotated Turing&nbsp;</em>is a wonderful guide through Turing&rsquo;s dense, theory heavy, 36 page paper. It can be very hard to traverse a mathematical paper like this. In fact, after reading Petzold&rsquo;s book, I think this is the&nbsp;<em>only&nbsp;</em>way to traverse a research paper of this depth (as an outsider to the field). Petzold corrects many errors Turing managed to make in his original paper. He also provides useful examples, further explanation when none is given, and rich historical context. Reading a paper with none of these things is bound to result in misunderstanding. I wish a book like this existed for every challenging research paper. A summary of this book is moreso a summary of Turing&rsquo;s paper plus the incredibly useful context and corrections added by Charles Petzold.</p>
+      <p>First, some historical context. What was Turing even trying to do here? Computation didn&rsquo;t simply come to him in a dream, and it surely wouldn&rsquo;t have been published if it came out of the blue. No, Turing&rsquo;s notion of computation was an unbelievably novel solution for a mathematical problem named by David Hilbert in the 19th century:</p>
+      <p style="margin-left: 30.0px;">&ldquo;The decision problem [<em>das entscheidungsproblem</em>] is solved when we know a procedure with a finite number of operations that determines the validity or satisfy ability of any given expression.... The decision problem must be considered the main problem of mathematical logic.&rdquo;</p>
+      <p style="margin-left: 30.0px;">(From Hilbert and Ackermann&rsquo;s&nbsp;<em>Grundz&uuml;ge der Theoretischen Logik&nbsp;</em>(&ldquo;The Restricted Functional Calculus&rdquo;))</p>
+      <p>The question Turing was trying to address was this: given any mathematical/logical expression, is there a general way to say whether or not it is <a href="https://en.wikipedia.org/wiki/Validity_(logic)">valid</a>? Here, valid means it is a formula of a certain formal system (eg logic). So is there a decision procedure we can follow to determine whether or not a certain mathematical expression is well formed/valid? [spoiler] Turing shows that no, a decision procedure does not exist. &ldquo;The Entscheidungsproblem cannot be solved.&rdquo;</p>
+      <p>Turing lays out quite a bit of groundwork to prove this. The paper is divided into 11 sections. Sections 1-7 is the groundwork for his proof, where he introduces the idea of using a machine to calculate numbers, the definitions and notation he&rsquo;ll be using, and &ldquo;universal computing machines.&rdquo; Sections 8, 9, and 10 lay out the logic and proves the lemmas necessary for his ultimate proof. Section 11, then, is the proof.</p>
+      <p>In section 1, &ldquo;computing machines&rdquo; are introduced. They consist of a tape of arbitrary length with squares containing symbols, and a scanner mechanism to &ldquo;scan&rdquo; the symbols on the tape. The scanner can perform essentially five operations: read the currently scanned symbol, erase the currently scanned symbol, print a symbol on a blank square, move left, and move right. &ldquo;It is my contention that these operations include all those which are used in the computation of a number&rdquo; (232). So that&rsquo;s it: a system that has some pretty elementary operations, any finite number of symbols, and read/write capabilities. In section 2, Turing clarifies his definition of a computing machine: it is only those machines which result in a tape with 0 and 1 as the symbols that he considers computing machines. The computed number is whatever is left on the tape after computation, a binary decimal representing a number between 0 and 1, where the decimal point is implied to exist before the first binary digit. So the number .0101010101... on a tape is 1/3 in binary.&nbsp;</p>
+      <p>1/3 is precisely the number Turing computes with his first machine in the next section. An&nbsp;<em>instruction&nbsp;</em>(Turing names it a &ldquo;machine-configuration&rdquo;) is essentially made up of multiple operations conditional on the symbol on currently scanned square.</p>
+      <p>Here&rsquo;s what the entire machine looks like, made up of 4 instructions:</p>
+      <table data-layout="default">
+      <tbody>
+      <tr>
+      <th>
+      <p><strong>Config</strong></p></th>
+      <th>
+      <p><strong>Scanned symbol</strong></p></th>
+      <th>
+      <p><strong>Operations</strong></p></th>
+      <th>
+      <p><strong>Next config</strong></p></th></tr>
+      <tr>
+      <td>
+      <p>A</p></td>
+      <td>
+      <p>Blank</p></td>
+      <td>
+      <p>P0, R</p></td>
+      <td>
+      <p>B</p></td></tr>
+      <tr>
+      <td>
+      <p>B</p></td>
+      <td>
+      <p>Blank</p></td>
+      <td>
+      <p>R</p></td>
+      <td>
+      <p>C</p></td></tr>
+      <tr>
+      <td>
+      <p>C</p></td>
+      <td>
+      <p>Blank</p></td>
+      <td>
+      <p>P1, R</p></td>
+      <td>
+      <p>D</p></td></tr>
+      <tr>
+      <td>
+      <p>D</p></td>
+      <td>
+      <p>Blank</p></td>
+      <td>
+      <p>R</p></td>
+      <td>
+      <p>A</p></td></tr></tbody></table>
+      <p>We start at&nbsp;<strong>A.&nbsp;</strong>The tape starts blank, so the scanned symbol is blank, so we perform the operations. We print a zero, then move right, then go into configuration B. In configuration&nbsp;<strong>B</strong>&nbsp;we see another blank, so we go right, then go into&nbsp;<strong>C</strong>. In C, we see a blank, so we print 1 and go right, then go to&nbsp;<strong>D</strong>. D goes right and repeats the whole process.</p>
+      <p>Clearly a simple machine. We don&rsquo;t even get to see the conditional branching that occurs when there&rsquo;s a chance we see some symbol instead of a blank square. But Turing has to start simple to build an intuition for the complexity that comes further along. Here&rsquo;s what a configuration conditional configuration looks like:</p>
+      <table data-layout="default">
+      <tbody>
+      <tr>
+      <th>
+      <p><strong>Config</strong></p></th>
+      <th>
+      <p><strong>Scanned Symbol</strong></p></th>
+      <th>
+      <p><strong>Operations</strong></p></th>
+      <th>
+      <p><strong>Next Config</strong></p></th></tr>
+      <tr>
+      <td>
+      <p>A</p></td>
+      <td>
+      <p>0</p></td>
+      <td>
+      <p>P0</p></td>
+      <td>
+      <p>A</p></td></tr>
+      <tr>
+      <td>
+      <p /></td>
+      <td>
+      <p>1</p></td>
+      <td>
+      <p>R, R, P1</p></td>
+      <td>
+      <p>A</p></td></tr>
+      <tr>
+      <td>
+      <p /></td>
+      <td>
+      <p>Blank</p></td>
+      <td>
+      <p>R, R, P0</p></td>
+      <td>
+      <p>A</p></td></tr></tbody></table>
+      <p>There, we&rsquo;ve condensed our 1/3-computing machine to a single instruction. We&rsquo;ve also increased the number of operations one instruction can perform. The classic Turing Machine is limited to one print and one move, which are the rules his machines play by for most of his paper. If you play out the machine above, you&rsquo;ll notice the binary digits are printed on every&nbsp;<em>other&nbsp;</em>square on the tape. Turing gives room after each digit so the digit can be &ldquo;marked&rdquo; by another symbol, maybe the symbol&nbsp;<em><strong>#&nbsp;</strong></em>or something.&nbsp;<em>Subroutines -&nbsp;</em>a word that Turing doesn&rsquo;t use but helps understanding - are used frequently. An example of a subroutine can be abstractly described as &ldquo;go left until you see the symbol&nbsp;<em><strong>#</strong></em>&rdquo; or even &ldquo;find the first digit of this number.&rdquo; The notion of subroutines lets us venture into more complex machine behavior while still consisting of elementary fundamental operations.&nbsp;To be clear, every subroutine in the paper is well defined with a table like above, not with a sentence describing what the machine will do - every machine provably works.</p>
+      <p>An interesting step that Turing takes is proving the <a href="https://en.wikipedia.org/wiki/Recursively_enumerable_set">enumerability</a> of the computable numbers. This deserves a whole digression into number classes, infinity, but I will leave it to the book to describe because it does it so elegantly. Essentially, Turing shows that every possible Turing machine can correspond with an unique finite integer. He calls it the Description Number of the machine, and since integers are enumerable, computable numbers are too. Description Numbers are used to show a few other things. You can&rsquo;t, for example, determine whether a machine will eventually print a 1 or a 0 given the instructions of the machine (encoded in the Description Number). This probably inspired Martin Davis to describe the halting problem for the first time, stating that there is no general way to tell whether a machine will eventually stop running (which is out of place in the context of this paper, because Turing only described machines that run forever).</p>
+      <p>The grand finale of the paper consists of a rigorous and hard-to-follow proof, where Turing builds a monster of a formula consisting of 6 nested quantifiers and a surprising amount of errors that needed correction by Petzold. I definitely will not try to explain it because I am far from understanding it myself, but the result is the proof that no general procedure to determine the validity of a mathematical expression exists. It&rsquo;s a result that&rsquo;s quite rich in hidden implications, but &ldquo;the structure Turing built to support this result - the imaginary device now known as the Turing Machine - ultimately would become more interesting and fruitful than the actual proof....&rdquo;</p>
+      <p>Turing created something timeless here: a tool to describe what exactly &ldquo;computing&rdquo; is. A required class to complete my computer science degree is <em>Theory of Computing, </em>where Turing machines, decidability, and the limits of computation are explored. This paper was the foundation of this new field. The inquiry into computation has been a fruitful one. Computers now are capable of ridiculous things; it&rsquo;s easy to forget that they are carrying out fundamentally Turing-esque operations. Computation has become a powerful epistemological tool, too. Many processes can be thought of in computational terms; many people (including myself) believe that the universe itself is a Turing machine. Which implies nothing that occurs in the universe is but a computation (including consciousness).</p>
+      <p>I can&rsquo;t recommend this book enough if you want to get a seriously well researched and thoroughly explained introduction to the conceptual bedrock of computing.&nbsp;</p>
+    </>
+  },
+  {
     title: "The Frailty of Reputation",
     date: "09/04/2020",
     image: "",
