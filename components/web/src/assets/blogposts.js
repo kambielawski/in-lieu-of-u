@@ -2,6 +2,32 @@ import React from 'react';
 
 const blogposts = [
   {
+    title: "Against Libertarianism",
+    date: "11/12/2020",
+    image: "",
+    url: "AgainstLibertarianism",
+    tags: ["philosophy"],
+    html: <>
+      <p>I have heard enough anti-libertarian arguments that I want to write them down and really consider them. In brief, here are three objections to the libertarian ideal that lead me to think it isn&rsquo;t much of an ideal:</p>
+      <p>1. Nice in theory</p>
+      <p>Libertarianism is nice <em>in theory. </em>Contracts are law, no violation of individual freedoms, property ownership is cut and dry, so there&rsquo;s no reason for violence. But in <em>practice, </em>none of these things can ever be guaranteed. Imagine you&rsquo;re walking in the state of nature, roaming an apple orchard planted by God Himself. As you&rsquo;re converting nature&rsquo;s resources to your own property with your labor, you hear my voice behind you: &ldquo;that apple is mine.&rdquo; As you turn around, you think <em>no it&rsquo;s not&hellip; I picked it myself! </em>But when you see the glock in my hand, you&rsquo;re certain: the apple you hold is not yours, it is mine. &ldquo;But&hellip; that&rsquo;s so immoral,&rdquo; you say. &ldquo;Morals shmorals,&rdquo; I reply.</p>
+      <p>2.<a href="https://kambielawski.atlassian.net/wiki/spaces/KS/pages/452296705/Making+Sense+of+the+Macro"> Coordination problems</a></p>
+      <blockquote style={{
+  display: 'block',
+  marginTop: '1em',
+  marginBottom: '1em',
+  marginLeft: '40px',
+  marginRight: '40px',
+}}>
+      <p>"<strong>Coordination problems</strong> are cases in which everyone agrees that a certain action would be best, but the free market cannot coordinate them into taking that action."</p></blockquote>
+      <p>Ideas of the form, &ldquo;wouldn&rsquo;t it be great if everyone just did X&rdquo; are easy to come by. But unfortunately, it is often the case in a free market that if <em>everyone </em>did X, an incentive for not doing X arises. But X only works if <em>everyone </em>did it, so there will be defectors acting in their own self-interest ruining the optimal outcome. &ldquo;Rent-seeking&rdquo; is an economic behavior where an entity finds a way to extract value without contributing value. If you owned a segment of a river and you simply charged a fee for people to pass through your river, you&rsquo;re a rent-seeker. Even worse is if you inherited that land; somehow you have acquired a free lunch, even though <a href="https://en.wikipedia.org/wiki/There_ain%27t_no_such_thing_as_a_free_lunch">there ain&rsquo;t no such thing</a>. </p>
+      <p>3. What <em>is </em>property?</p>
+      <p>I understand &ldquo;property&rdquo; as some mapping of physical objects to&hellip; a consciousness? Wait, no - a bat might be conscious, so - a rational consciousness? Well, humans aren&rsquo;t all <em>that </em>rational&hellip; Wait, what is<em> </em>consciousness again? My problem is mostly with the process of inserting an object into the ownership map. The hash function that makes the most sense to me is some <a href="http://www.daviddfriedman.com/Academic/Property/Property.html">positive account of property rights</a>, where really, power over control of the object is equivalent to ownership of the object. This is the same idea as my owning your apple because my glock says so. </p>
+      <p>So these objections lead me to think libertarianism, taken to a logical conclusion, might be a dead-end. I still think it could be an escape rope out of our current situation in the US - the government is a monstrosity in its current form. I don&rsquo;t think I&rsquo;ll ever <em>not </em>be fond of libertarian principles, because freedom and individuality are awesome. Also, if any of the above are non-issues in your eyes, please convince me, because I&rsquo;m feeling a little philosophically naked without libertarianism. </p>
+      <p />
+    </>
+  },
+  {
     title: "Book: The Annotated Turing",
     date: "09/06/2020",
     image: "",
