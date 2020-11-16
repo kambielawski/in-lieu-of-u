@@ -2,6 +2,32 @@ import React from 'react';
 
 const blogposts = [
   {
+    title: "Operating System Virtualization",
+    date: "11/16/2020",
+    image: "",
+    url: "OperatingSystemVirtualization",
+    html: <>
+      <p>Virtualization is a concept that has eluded my understanding until recently and it deserves it&rsquo;s own post. So this one is about virtualization in a computer system, which is achieved by a dance between the hardware and the operating system software. </p>
+      <p>First, what&rsquo;s virtualization and why is it important? Virtualization is an abstraction of a computer&rsquo;s hardware to make programming the computer easier. Essentially, the hardware is too complicated to program directly, so operating systems will employ virtualization of the CPU and memory in order to ease the burden of the programmer. As a programmer, it&rsquo;s useful to know the nature of this abstraction layer because every computer you write programs for is going to have an operating system installed and running along with your program. </p>
+      <p>OS&rsquo;s perform two major virtualizations: the CPU (the processor) and memory (i.e. RAM + storage). An OS can be thought of as a manager of these two physical components of a computer. A prerequisite concept to understanding how this is accomplished are <strong>processes. </strong>A process == a running program (a program that is <em>not </em>running is just a bunch of instructions stored in a drive). An OS will take a program and start running it by creating a process for it.</p>
+      <p>When you run a program (e.g. click on a .exe file), along with creating a process the OS will allocate a segment of physical memory for it. That allocation of memory is the virtualization of memory. From the program&rsquo;s POV, it thinks it has the computer&rsquo;s memory all to itself. From the OS&rsquo;s POV, the program really only has a small segment. Here the programmer is relieved of some complexity: programs have their own memory that can be referred to without having to worry about other processes using the same memory. That segment of memory is referenced by the process&rsquo;s <strong>virtual address space</strong>. Whenever you refer explicitly to some memory address in your program, that memory address is virtual. When the computer compiles or interprets the code, all of your address references goes through an address translation to get the physical memory address.</p>
+      <p>The <strong>scheduler</strong> helps with the virtualization of the CPU. Programs have instructions they need to run one at a time, and if you have 100 running programs and only 1 processor, the scheduler will handle the execution of all 100 programs in (hopefully) a reasonable manner. Again, letting the OS handle this lifts a heavy burden off of the programmer; worrying about whether or not their program will actually execute is something a programmer probably shouldn&rsquo;t have to worry about. Something that should be stressed here: scheduling is a <em>hard </em>problem in operating systems research. There are a bunch of different approaches to effectively scheduling potentially hundreds of processes, but here I just want to give you a sense of what&rsquo;s considered &ldquo;effective&rdquo; scheduling. </p>
+      <p>First is the idea of fairness. Most OS architectures share a communitarian philosophy and won&rsquo;t exclude any process from execution. Operating systems may employ policies to distribute the timeshare of the CPU differently based on some metric of the importance of a process, but OS schedulers will always schedule <em>some </em>amount of CPU time for all processes' instructions. </p>
+      <p>Another performance metric is <em>turnaround time,</em> which is simply the average time it takes a process to run ALL of its instructions. This isn&rsquo;t as straightforward as multiplying the number of instructions by the time per instruction; when there are hundreds of processes trying to run thousands of instructions each, how do we schedule all of them to? If we&rsquo;re trying to optimize for turnaround time only, simply executing the program with the least amount of instructions (then the next least, then the next&hellip;) will provably do this. But that means the longest program won&rsquo;t get to run at all until all the shorter ones have run, which is why a <em>response time </em>metric is also taken into account. Response time is essentially the time between a process&rsquo;s first &ldquo;arrival&rdquo; (i.e. when it is first created and given to the scheduler) and when the process&rsquo;s first instruction runs. If 100 processes were created at once, and we ran them all to completion in order, of course the response time will be atrocious for the last processes. So usually<em> </em>operating systems try to trade off the two in a satisfactory way by switching program execution at a set interval and employing policies to achieve fairness and a good balance of turnaround time and response time. </p>
+      <p>There are a bunch of different ways of doing all of this of course, so here are some pointers to currently used methods:</p>
+      <ul>
+      <li>
+      <p><a href="https://developer.ibm.com/tutorials/l-completely-fair-scheduler/">Linux's Completely Fair Scheduler (CFS)</a></p></li>
+      <li>
+      <p><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/Citations/notes-solaris.pdf">Multilevel Feedback Queue Schedulers</a></p></li>
+      <li>
+      <p><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-lottery.pdf">Proportional Share / Lottery Scheduling</a> (lottery scheduling uses randomness, and though I don&rsquo;t like adding randomness unless necessary, it is an interesting solution)</p></li></ul>
+      <p>If you take away anything from this, it&rsquo;s that the OS is a resource manager. Its major functions are to manage critical resources that programs need - namely, CPU time and memory. It does this by creating an abstraction called a process for each running program and allocating memory &amp; CPU time to each of these. </p>
+      <p />
+      <p />
+    </>
+  },
+  {
     title: "Against Libertarianism",
     date: "11/12/2020",
     image: "",
