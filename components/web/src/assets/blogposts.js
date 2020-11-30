@@ -2,6 +2,24 @@ import React from 'react';
 
 const blogposts = [
   {
+    title: "The Great American Bubble",
+    date: "11/29/2020",
+    image: "",
+    url: "GreatAmericanBubble",
+    html: <>
+      <p><a href="https://fs.blog/2015/12/peter-thiel-end-of-hubris/">Peter Thiel&rsquo;s definition of a bubble </a>necessitates the existence of a widespread, false belief. Is there such a belief in the United States? Surely there is, but I should clarify the question I&rsquo;ve been pondering: is there a monstrous, catastrophic bubble that exists in the United States (or perhaps even the US is too small a scope), where the corresponding false belief is one that has not been questioned in decades, perhaps centuries? Something along the lines of, &ldquo;America is the best country in the world&rdquo;? </p>
+      <p>Let me try to explain myself: Americans have always had a sort of patriotism, an assumption that we are indeed living in the best (see: freest, wealthiest, most stable) country in the world. There is plenty of evidence that this is the case, but there is also a seemingly growing body of evidence that this is not the case. The central dogma of Americans, <a href="https://www.amazon.com/One-Mans-View-World-Kuan/dp/9814342564">according to an outsider whom I respect greatly</a>, is that tomorrow will always be a sunny day. Is that belief still on solid ground? </p>
+      <p>I have little knowledge of other countries to compare today&rsquo;s US to, so I will use what sparse knowledge I have of the US&rsquo;s history to make a comparison (self-comparison is a better method anyway). These are blasphemous questions I am asking, I am aware. And there are plenty of rebuttals to these concerns - I am likely being an alarmist. I&rsquo;ll write a quick response to each of my concerns one by one to help me understand the other side. </p>
+      <p>First, the crumbling of the &ldquo;legacy media&rdquo; can&rsquo;t be overstated - there is plenty of discussion about this phenomenon, so I won&rsquo;t elaborate on it, but I will say particular forms of &ldquo;new media&rdquo; (i.e. social media, videos, podcasting) don&rsquo;t seem to be much better at delivering a sensible narrative. Conversely, the replacement of legacy media with new media is inevitable, and it will happen slowly but surely &ndash; there is no reason this transition has to be the demise of America. </p>
+      <p>Second, a college degree seems to be of increasingly less value and higher cost &ndash; this is a bubble in itself, the corresponding false belief being that a college degree is necessary for success. I am less knowledgeable about what&rsquo;s going on in higher ed., maybe because I am too intimate, but there&rsquo;s definitely a noxious odor coming from it. The rebuttal to this is that the US university system is <em>clearly </em>still the best in the world (which I am fairly sure is true?). </p>
+      <p>The US ranks 17th on some plausibly valid <a href="https://www.heritage.org/index/country/unitedstates?version=164">Economic Freedom Index</a>. Economic freedom is not the only type of freedom, I know; the US seems to have some of the strongest guaranteed protections of any other country. But it begs the question: are we really the freest country in the world? I am skeptical of this assumption that we are, as hard as it is to admit such a thing. The veil is coming off with this one in particular due to the heavy hand of the governance and the apparently unrestricted powers of the Federal Reserve throughout the COVID pandemic. </p>
+      <p>I want to mention a couple more things that have been making me feel this way, though I can speak far less knowledgeably about them. One is <a href="https://www.amazon.com/Great-Stagnation-Low-Hanging-Eventually-eSpecial-ebook/dp/B004H0M8QS">The Great Stagnation</a>, communicated by Tyler Cowen, Thiel, and co. This is essentially the idea that there has been little technological progress except in the field of computing and communications since the 1970s. I am still questioning if this is true, but I thought I&rsquo;d throw it out there as a possible contributor to the Great American Bubble. Another is the blatantly obvious <a href="https://www.pewresearch.org/politics/interactives/political-polarization-1994-2017/">increase in political polarization</a>.</p>
+      <p>This is just another attempt at answering the question, &lsquo;what the hell&rsquo;s going on?&rsquo; I don&rsquo;t purport to know, and I feel like a lunatic trying to connect these observations together. </p>
+      <p>Meta: I commit to having a comments section by the end of this year. I need <em>someone</em> to call me out on my BS!</p>
+      <p />
+    </>
+  },
+  {
     title: "Operating System Virtualization",
     date: "11/16/2020",
     image: "",
