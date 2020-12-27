@@ -2,6 +2,24 @@ import React from 'react';
 
 const blogposts = [
   {
+    title: "2020 Journal Entry",
+    date: "12/27/2020",
+    image: "",
+    url: "2020JournalEntry",
+    html: <>
+      <p>What a wonderful year!</p>
+      <p>I honestly can&rsquo;t recall what life <em>felt </em>like in January 2020. I can only remember the COVID omens that I only recognize with hindsight. I remember watching a video of the CCP dousing their streets with antiviral fluids, and thinking, &ldquo;wow, that&rsquo;s crazy, good thing we aren&rsquo;t going through that.&rdquo; I remember a classmate of mine coming back to the US from Malaysia and she was wearing a mask before it was <del>cool </del> mandated. I remember my friend - who literally never cleans his room - spend a day wiping down every object and surface in his room, and thinking it was a bit much.</p>
+      <p>But then, within the span of a week, it all became normal. Encouraged. Everyone went home for spring break, headlines were scarier by the hour, and eventually shit got real. Travel to Europe - banned. School - online for the rest of the year. Stock market tanked for a couple days. Restaurants shut down, stay inside, don&rsquo;t go anywhere. </p>
+      <p>Life kept chugging for me. I can&rsquo;t say I ever felt personally at risk; the death rates by age were clear at the beginning. Old people were/are dying at way higher rates. Young, healthy people aren&rsquo;t going to die. I snagged a remote software engineering internship my last week of online classes, which was nice. </p>
+      <p>At some point it became clear things weren&rsquo;t going back to normal anytime soon. I made the decision to skip the fall 2020 semester at KU, because the tuition prices hadn&rsquo;t changed. Classes were online, most campus buildings were shut down, restrictions were tight in Lawrence. I thought I&rsquo;d regret it, but I don&rsquo;t - at all. I made the right decision. I was able to learn things I wouldn&rsquo;t have learned in college (for CS students: <a href="https://www.youtube.com/channel/UCuXy5tCgEninup9cGplbiFw">Missing semester</a>), follow my own curiosities by reading and writing on this blog, and make money. Remote work was okay, but near the end of the internship I felt near the top of the learning curve and I am ready for the next thing. </p>
+      <p>The next thing, by the way, is more college. Yeah, I know. It&rsquo;s not ideal. College is overpriced. I could easily teach myself everything I need to know online. College degrees aren&rsquo;t nearly as valuable. Especially CS degrees. </p>
+      <p>But I intend to take advantage of the opportunities only college students have access to. I never exploited my access to edge-of-human-knowledge researchers that exist only at universities. Nor did I befriend other ambitious geeks who want to build the future. I never utilized my exclusive student access to places on campus like woodshops or computer hardware labs or student clubs like robotics. </p>
+      <p>My cognitive dissonance regarding college attendance has only grown stronger. The energetic environment is invigorating, and there are a few exclusive opportunities. But good lord the <em>cost! </em>Why is there nowhere else to learn and grow as a young adult with others doing the same thing? </p>
+      <p>Anyway, 2020 has been a trip and a half. Can&rsquo;t wait for more glitches in the simulation in 2021. </p>
+      <p />
+    </>
+  },
+  {
     title: "The Great American Bubble",
     date: "11/29/2020",
     image: "",
